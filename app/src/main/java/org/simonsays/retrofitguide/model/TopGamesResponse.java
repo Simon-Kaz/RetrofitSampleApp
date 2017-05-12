@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by szymonkaz on 05/06/16.
  */
-public class TopGamesResp {
+public class TopGamesResponse {
 
     public Integer _total;
 

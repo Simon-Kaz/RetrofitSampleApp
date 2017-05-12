@@ -1,7 +1,7 @@
 package org.simonsays.retrofitguide.rest;
 
-import org.simonsays.retrofitguide.model.TopGamesResp;
-import org.simonsays.retrofitguide.model.TopStreamsResp;
+import org.simonsays.retrofitguide.model.TopGamesResponse;
+import org.simonsays.retrofitguide.model.TopStreamsResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -15,17 +15,17 @@ public interface TwitchService {
 
     // get stream data for specified channel
     @GET("streams/{channel}")
-    Call<TopStreamsResp> channelData(
+    Call<TopStreamsResponse> channelData(
             @Path("channel") String channel
     );
 
-    // get stream data for stream using offset
+    // get stream data using offset
     @GET("streams?limit=1")
-    Call<TopStreamsResp> specificStreamResp(
+    Call<TopStreamsResponse> singleStreamResponse(
             @Query("offset") int offset
     );
 
     // get top games (max viewers DESC)
     @GET("games/top")
-    Call<TopGamesResp> topGamesResp();
+    Call<TopGamesResponse> topGamesResponse();
 }

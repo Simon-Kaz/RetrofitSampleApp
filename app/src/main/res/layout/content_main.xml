@@ -12,35 +12,36 @@
     tools:context=".activity.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/streamTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/channelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/fetchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="151dp"
-        android:text="Fetch" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textIsSelectable="false" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/textView"
-        android:layout_above="@+id/button"
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textIsSelectable="false" />
+        android:text="@string/fetch" />
 
 </RelativeLayout>
 

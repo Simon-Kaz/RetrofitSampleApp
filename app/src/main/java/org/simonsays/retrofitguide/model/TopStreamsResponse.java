@@ -2,7 +2,7 @@ package org.simonsays.retrofitguide.model;
 
 import java.util.List;
 
-public class TopStreamsResp {
+public class TopStreamsResponse {
 
     private List<Stream> streams;
     private int _total;
@@ -12,7 +12,7 @@ public class TopStreamsResp {
     }
 
     public Stream getStream(int i) {
-        return streams.get(0);
+        return streams.get(i);
     }
 
 }

@@ -1,7 +1,7 @@
 package org.simonsays.retrofitguide.model;
 
 /**
- * Created by szymonkaz on 06/06/16.
+ * Stream contains general info about the streamer and the type of broadcast e.g. playlist, live.
  */
 public class Stream {
 
@@ -20,6 +20,7 @@ public class Stream {
         return game + " broadcasted for " + viewers;
     }
 
+    // Channel contains detailed information about the streamer
     public class Channel {
 
         public Boolean mature;
