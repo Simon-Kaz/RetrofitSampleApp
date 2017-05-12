@@ -1,13 +1,20 @@
 apply plugin: 'com.android.application'
 
+//Twitch.TV API Key
+def TWITCH_API_KEY = '"' + TwitchApiKey + '"' ?: 'Twitch.TV API Key Not Provided!'
+
+android.buildTypes.each { type ->
+    type.buildConfigField 'String', 'TwitchApiKey', TWITCH_API_KEY
+}
+
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "org.simonsays.retrofitguide"
         minSdkVersion 17
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -22,10 +29,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
-    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.google.code.gson:gson:2.7'
 
 }
